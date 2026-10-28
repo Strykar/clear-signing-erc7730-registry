@@ -25,10 +25,10 @@
     "formats": {
       "setRewardCaller(address _rewardCaller)": {
         "intent": "Set or revoke reward caller",
-        "interpolatedIntent": "Reward caller {_rewardCaller}",
+        "interpolatedIntent": "Set reward caller to {_rewardCaller} (zero address revokes)",
         "fields": [
           {
-            "label": "Reward caller",
+            "label": "Reward caller (zero address = revoke)",
             "format": "addressName",
             "params": {
               "types": [
@@ -122,8 +122,8 @@
         ]
       },
       "unbondWithHint(uint256 _amount, address _newPosPrev, address _newPosNext)": {
-        "intent": "Undelegate LPT",
-        "interpolatedIntent": "Undelegate {_amount}",
+        "intent": "Undelegate LPT; full unbond resigns orchestrator",
+        "interpolatedIntent": "Undelegate {_amount}; a full unbond resigns an orchestrator",
         "fields": [
           {
             "label": "Amount",
@@ -148,7 +148,7 @@
       },
       "withdrawFees(address _recipient, uint256 _amount)": {
         "intent": "Withdraw fees",
-        "interpolatedIntent": "Withdraw {_amount}",
+        "interpolatedIntent": "Withdraw {_amount} fees to {_recipient}",
         "fields": [
           {
             "label": "Recipient",
@@ -185,11 +185,11 @@
             "visible": "always"
           }
         ],
-        "interpolatedIntent": "Withdraw #{_unbondingLockId}"
+        "interpolatedIntent": "Withdraw LPT of unbonding lock #{_unbondingLockId}"
       },
       "bondWithHint(uint256 _amount, address _to, address _oldDelegateNewPosPrev, address _oldDelegateNewPosNext, address _currDelegateNewPosPrev, address _currDelegateNewPosNext)": {
-        "intent": "Delegate LPT",
-        "interpolatedIntent": "Delegate {_amount} to {_to}",
+        "intent": "Delegate LPT; existing stake moves to delegate",
+        "interpolatedIntent": "Delegate {_amount} to {_to}; any existing stake moves there too",
         "fields": [
           {
             "label": "Amount",

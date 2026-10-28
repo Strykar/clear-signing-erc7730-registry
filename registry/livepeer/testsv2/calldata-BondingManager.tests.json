@@ -20,11 +20,11 @@
         "owner": "Livepeer",
         "fields": [
           {
-            "label": "Reward caller",
+            "label": "Reward caller (zero address = revoke)",
             "value": "0x1B0c26FC2E310eFB2649C24eC9AA966efFDA292F"
           }
         ],
-        "interpolatedIntent": "Reward caller 0x1B0c26FC2E310eFB2649C24eC9AA966efFDA292F"
+        "interpolatedIntent": "Set reward caller to 0x1B0c26FC2E310eFB2649C24eC9AA966efFDA292F (zero address revokes)"
       }
     },
     {
@@ -36,11 +36,11 @@
         "owner": "Livepeer",
         "fields": [
           {
-            "label": "Reward caller",
+            "label": "Reward caller (zero address = revoke)",
             "value": "0x0000000000000000000000000000000000000000"
           }
         ],
-        "interpolatedIntent": "Reward caller 0x0000000000000000000000000000000000000000"
+        "interpolatedIntent": "Set reward caller to 0x0000000000000000000000000000000000000000 (zero address revokes)"
       }
     },
     {
@@ -100,7 +100,7 @@
       "rawTx": "0x02f8d082a4b18207ef8084026269a0830484c89435bcf3c30594191d53231e4ff333e8a770453e4080b8649500ed9b000000000000000000000000000000000000000000000014ad927bcf60389690000000000000000000000000525419ff5707190389bfb5c87c375d710f5fcb0e0000000000000000000000004f4758f7167b18e1f5b3c1a7575e3eb584894dbcc001a03d37bfd85412dacb84adc8f99f3a31a558b775334e823246d59f41fa3900a2c5a06fa6d5ddb4c46b90a736380a6351a170ab8fe612d37a057166809dcc28d9df0b",
       "txHash": "0xaf13f7db2a98702692c01738283ab426f4d08e6dca01ce806138f51bd1d3a911",
       "expected": {
-        "intent": "Undelegate LPT",
+        "intent": "Undelegate LPT; full unbond resigns orchestrator",
         "owner": "Livepeer",
         "fields": [
           {
@@ -108,7 +108,7 @@
             "value": "381.44207671995508904 LPT"
           }
         ],
-        "interpolatedIntent": "Undelegate 381.44207671995508904 LPT"
+        "interpolatedIntent": "Undelegate 381.44207671995508904 LPT; a full unbond resigns an orchestrator"
       }
     },
     {
@@ -128,7 +128,7 @@
             "value": "0.078415387890453325 ETH"
           }
         ],
-        "interpolatedIntent": "Withdraw 0.078415387890453325 ETH"
+        "interpolatedIntent": "Withdraw 0.078415387890453325 ETH fees to 0xdc28F2842810D1a013aD51DE174D02eABA192dC7"
       }
     },
     {
@@ -144,7 +144,7 @@
             "value": "436"
           }
         ],
-        "interpolatedIntent": "Withdraw #436"
+        "interpolatedIntent": "Withdraw LPT of unbonding lock #436"
       }
     },
     {
@@ -152,7 +152,7 @@
       "rawTx": "0x02f9013282a4b10184016f7e2084016f7e20830931ad9435bcf3c30594191d53231e4ff333e8a770453e4080b8c46bd9add4000000000000000000000000000000000000000000000004192927743b880000000000000000000000000000bc144f1a34f5b858900413d35bfb7cb6b3b0d65b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000525419ff5707190389bfb5c87c375d710f5fcb0e0000000000000000000000000000000000000000000000000000000000000000c080a02205c63ad3cf4254856c9a572f129a99ba9a8bd289d94520d004b4f780cff8e7a07008c9ebb600a331218494179698eff9a5ec27e6fd046dc6e441fc3db4a54894",
       "txHash": "0x869dc30114d5760a6c33fa470b19c4fb2fbfc27b9eed44f5b9aa418b9910f962",
       "expected": {
-        "intent": "Delegate LPT",
+        "intent": "Delegate LPT; existing stake moves to delegate",
         "owner": "Livepeer",
         "fields": [
           {
@@ -164,7 +164,7 @@
             "value": "0xbc144F1a34f5b858900413D35BFb7cb6b3B0d65b"
           }
         ],
-        "interpolatedIntent": "Delegate 75.6 LPT to 0xbc144F1a34f5b858900413D35BFb7cb6b3B0d65b"
+        "interpolatedIntent": "Delegate 75.6 LPT to 0xbc144F1a34f5b858900413D35BFb7cb6b3B0d65b; any existing stake moves there too"
       }
     }
   ]
