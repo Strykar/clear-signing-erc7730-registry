@@ -112,6 +112,22 @@
       }
     },
     {
+      "description": "Undelegate all stake, orchestrator resigns - chain 42161",
+      "rawTx": "0x02f8d082a4b18201da80840265c5008304b1989435bcf3c30594191d53231e4ff333e8a770453e4080b8649500ed9b0000000000000000000000000000000000000000000000081ae18312b883c1e10000000000000000000000009d5611bf0dadddb4441a709141d9229d7f6b3e47000000000000000000000000e9e284277648fcdb09b8efc1832c73c09b5ecf59c001a00fed00f565bd3cc36ea9b32a6dcc5e221dd0be56e60368e785ca3e831b581ae7a00dd9ef4a35d969d9dae82fa484027013b0da241011cbadae4dd28af0ee78a82b",
+      "txHash": "0xab9a70d3f023540cf0f4c2073bcb790b16fae54d487a9ccac62c5c44c9f4ea5a",
+      "expected": {
+        "intent": "Undelegate LPT; full unbond resigns orchestrator",
+        "owner": "Livepeer",
+        "fields": [
+          {
+            "label": "Amount",
+            "value": "149.510926020850729441 LPT"
+          }
+        ],
+        "interpolatedIntent": "Undelegate 149.510926020850729441 LPT; a full unbond resigns an orchestrator"
+      }
+    },
+    {
       "description": "Withdraw fees - chain 42161",
       "rawTx": "0x02f8b482a4b1820e36843b9aca0084773594008303c1269435bcf3c30594191d53231e4ff333e8a770453e4080b844ad3b1b47000000000000000000000000dc28f2842810d1a013ad51de174d02eaba192dc7000000000000000000000000000000000000000000000000011696613c228b4dc001a08902193a0c468bed06660415ad0d8a5c02e8e000aa4596af077b1e2e67050deea017d68d492860d382fd4f947d75562510c88d756ed76533b121ad771776d34e24",
       "txHash": "0xfe754eaef01ef36f022847677c94ed8a1cc87b3fc8f580c5e03d38dd0fb56dea",
@@ -129,6 +145,26 @@
           }
         ],
         "interpolatedIntent": "Withdraw 0.078415387890453325 ETH fees to 0xdc28F2842810D1a013aD51DE174D02eABA192dC7"
+      }
+    },
+    {
+      "description": "Withdraw fees to another recipient - chain 42161",
+      "rawTx": "0x02f8b082a4b1820ecf8084026288e0830328439435bcf3c30594191d53231e4ff333e8a770453e4080b844ad3b1b470000000000000000000000005fed4e606b613f55b72cfb33f3c06a87abce8c4d00000000000000000000000000000000000000000000000000b9ff3830404080c001a0f00db838a997fbd459fbddf9037030ab98cfa6a5d10d1711e50ec216168c80f7a03935ef99fc3a54be8508f6a61cfdaa988ab2350884c0f2427321fee6655955ce",
+      "txHash": "0x462eb2859fc8ce2fb4b58607aabe367e7529a63e6c42d88960577d2f4617a3d2",
+      "expected": {
+        "intent": "Withdraw fees",
+        "owner": "Livepeer",
+        "fields": [
+          {
+            "label": "Recipient",
+            "value": "0x5feD4E606B613F55b72CFb33F3C06A87abCE8C4d"
+          },
+          {
+            "label": "Amount",
+            "value": "0.05235348748424 ETH"
+          }
+        ],
+        "interpolatedIntent": "Withdraw 0.05235348748424 ETH fees to 0x5feD4E606B613F55b72CFb33F3C06A87abCE8C4d"
       }
     },
     {
@@ -165,6 +201,26 @@
           }
         ],
         "interpolatedIntent": "Delegate 75.6 LPT to 0xbc144F1a34f5b858900413D35BFb7cb6b3B0d65b; any existing stake moves there too"
+      }
+    },
+    {
+      "description": "Move existing stake to another delegate - chain 42161",
+      "rawTx": "0x02f9012e82a4b16580840174b160830ae8959435bcf3c30594191d53231e4ff333e8a770453e4080b8c46bd9add40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000525419ff5707190389bfb5c87c375d710f5fcb0e000000000000000000000000104a7ca059a35fd4def5ecb16600b2caa1fe1361000000000000000000000000d0585dd5269200410a133ca16ea875793d1eb038000000000000000000000000ac2e50c8f7ac0f82923a7df9d9903f6ec47419190000000000000000000000000000000000000000000000000000000000000000c080a0286a60c8d93fea156d71b39734dd49fb19598f0a504eb416ca06f1a5ad7a2313a00b9380bdda99a201fc3e103e7fba788e4a5a6b8cb17ac6829c204428beb738ae",
+      "txHash": "0x6cfc8b078fe4d579fec4337706b61c41cdfeb7ef5cc7b2e417fe67fd01d611cc",
+      "expected": {
+        "intent": "Delegate LPT; existing stake moves to delegate",
+        "owner": "Livepeer",
+        "fields": [
+          {
+            "label": "Amount",
+            "value": "0 LPT"
+          },
+          {
+            "label": "Delegate",
+            "value": "0x525419FF5707190389bfb5C87c375D710F5fCb0E"
+          }
+        ],
+        "interpolatedIntent": "Delegate 0 LPT to 0x525419FF5707190389bfb5C87c375D710F5fCb0E; any existing stake moves there too"
       }
     }
   ]
